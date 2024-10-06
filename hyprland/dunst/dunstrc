@@ -1,0 +1,37 @@
+[global]
+
+mouse_left_click = close_current
+mouse_middle_click = none
+mouse_right_click = none
+width = 300
+height = 100
+offset = 10x10
+origin = bottom-right
+font = Sans 11
+min_icon_size = 32
+max_icon_size = 64
+padding = 10
+horizontal_padding = 10
+frame_width = 0
+notification_limit = 3
+idle_threshold = 0
+corner_radius = 10
+icon_corner_radius = 10
+
+[urgency_low]
+
+background = "#2B303B"
+foreground = "#FFFFFF"
+timeout = 3
+
+[urgency_normal]
+
+background = "#2B303B"
+foreground = "#FFFFFF"
+timeout = 3
+
+[urgency_critical]
+
+background = "#2B303B"
+foreground = "#FFFFFF"
+timeout = 0
