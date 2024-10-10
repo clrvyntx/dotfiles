@@ -64,6 +64,8 @@ for_window {
     bindsym $mod+s exec $internet
     bindsym $mod+d exec $explorer
     bindsym $mod+f fullscreen
+    bindsym $mod+z splitv
+    bindsym $mod+x splith
     bindsym $mod+c floating toggle
     bindsym $mod+Shift+n reload
     bindsym $mod+Shift+F1 exec swaymsg exit
