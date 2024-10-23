@@ -100,7 +100,7 @@
             "format-ethernet": "",
             "format-wifi": "",
             "format-linked": "",
-            "format-disconnected": ""
+            "format-disconnected": "",
             "tooltip-format": "Network"
         }
     }
