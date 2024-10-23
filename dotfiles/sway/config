@@ -46,7 +46,7 @@ client.focused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.unfocused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.urgent "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 gaps inner 10
-gaps outer 15
+gaps outer 5
 default_border none
 default_floating_border none
 smart_gaps on
