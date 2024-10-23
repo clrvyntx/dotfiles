@@ -5,8 +5,8 @@
         "position": "bottom",
         "height": 40,
         "modules-left": ["memory", "cpu", "pulseaudio", "idle_inhibitor"],
-        "modules-center": ["sway/workspaces", "custom/scratchpad"],
-        "modules-right": ["tray", "battery", "network#ethernet", "network#disconnected", "clock"],
+        "modules-center": ["sway/workspaces"],
+        "modules-right": ["tray", "custom/scratchpad", "battery", "network#ethernet", "network#disconnected", "clock"],
         "idle_inhibitor": {
             "format": "{icon}",
             "cursor": false,
@@ -90,7 +90,7 @@
 	"custom/scratchpad": {
 	"format": "{icon}",
 	"show-empty": true,
-	"format-icons": [" "],
+	"format-icons": ["  "],
         "cursor": false,
 	"tooltip": false,
 	"on-click": "exec swaymsg '[class=.*] scratchpad show'"
