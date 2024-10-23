@@ -1,0 +1,10 @@
+on-button-left=dismiss
+on-button-right=none
+font=sans 11
+default-timeout=3000
+max-visible=3
+border-size=0
+border-radius=0
+padding=10
+background-color=#2B303BFF
+anchor=bottom-right
