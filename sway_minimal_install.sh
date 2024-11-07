@@ -4,8 +4,8 @@ makepkg -si
 cd ..
 
 fonts="noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome"
-desktop="sway swaybg swayidle swaylock gammastep mako libnotify polkit-gnome xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk xorg-xwayland qt5-wayland qt6-wayland"
-utils="foot j4-dmenu-desktop firefox ranger-git imagemagick udisks2 dragon-drop vim wl-clipboard swayimg mpv grim slurp ufw"
+desktop="sway swaybg swayidle swaylock gammastep mako libnotify autotiling-rs polkit-gnome xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk xorg-xwayland qt5-wayland qt6-wayland"
+utils="foot wmenu j4-dmenu-desktop firefox ranger-git imagemagick udisks2 dragon-drop vim wl-clipboard swayimg mpv grim slurp ufw"
 
 paru -S --needed $fonts $desktop $utils
 
