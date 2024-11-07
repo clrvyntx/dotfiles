@@ -120,7 +120,7 @@ for_window {
 # Status bar
 
 bar {
-    position top
+    position bottom
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     colors {
         statusline #ffffff
