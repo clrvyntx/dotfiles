@@ -5,7 +5,7 @@ set $mod Mod1
 # Default apps
 
 set $term foot
-set $menu j4-dmenu-desktop
+set $menu j4-dmenu-desktop --dmenu=wmenu --no-generic --term foot
 set $internet firefox
 set $explorer foot ranger
 
@@ -19,6 +19,7 @@ exec gammastep
 exec swaybg -i ~/.config/swaybg/Wallpaper.jpg
 exec swayidle -w
 exec mako
+exec autotiling-rs
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -64,8 +65,6 @@ for_window {
     bindsym $mod+s exec $internet
     bindsym $mod+d exec $explorer
     bindsym $mod+f fullscreen
-    bindsym $mod+z splitv
-    bindsym $mod+x splith
     bindsym $mod+c floating toggle
     bindsym $mod+Shift+n reload
     bindsym $mod+Shift+F1 exec swaymsg exit
