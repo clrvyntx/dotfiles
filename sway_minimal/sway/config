@@ -5,7 +5,7 @@ set $mod Mod1
 # Default apps
 
 set $term foot
-set $menu j4-dmenu-desktop --dmenu=wmenu --no-generic --term foot
+set $menu j4-dmenu-desktop --dmenu='wmenu -i' --no-generic --term foot
 set $internet firefox
 set $explorer foot ranger
 
@@ -120,7 +120,8 @@ for_window {
 
 bar {
     position bottom
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command ~/.config/sway/status.sh
+    separator_symbol ""
     colors {
         statusline #ffffff
         background #323232
