@@ -118,7 +118,6 @@ for_window {
 bar {
     position bottom
     status_command while ~/.config/sway/status.sh; do sleep 1; done
-    separator_symbol ""
     colors {
         statusline #ffffff
         background #323232
