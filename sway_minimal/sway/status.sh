@@ -2,7 +2,7 @@
 
 date_time=$(date "+%R")
 
-date_calendar=$(date "+%F")
+date_calendar=$(date "+%m/%d")
 
 battery_capacity=$(cat /sys/class/power_supply/BAT1/capacity)
 
