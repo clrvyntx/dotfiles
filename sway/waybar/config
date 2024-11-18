@@ -32,7 +32,7 @@
             "format": "{icon} {capacity}% ",
             "format-charging": " {capacity}%",
             "format-plugged": " {capacity}%",
-            "format-full": "",
+            "format-full": " {capacity}%",
             "format-icons": ["", "", "", "", ""]
         },     
         "memory": {
