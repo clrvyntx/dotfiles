@@ -6,5 +6,6 @@ max-visible=3
 border-size=0
 border-radius=0
 padding=10
+outer-margin=10
 background-color=#2B303BFF
 anchor=bottom-right
