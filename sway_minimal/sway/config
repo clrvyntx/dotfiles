@@ -95,6 +95,11 @@ for_window {
     bindsym $mod+i focus up
     bindsym $mod+l focus right
 
+    bindsym $mod+Shift+j move workspace to output left
+    bindsym $mod+Shift+k move workspace to output down
+    bindsym $mod+Shift+i move workspace to output up
+    bindsym $mod+Shift+l move workspace to output right
+
     bindsym $mod+Right workspace next_on_output 
     bindsym $mod+Left workspace prev_on_output
 
