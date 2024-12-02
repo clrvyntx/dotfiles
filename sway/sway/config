@@ -101,6 +101,11 @@ for_window {
     bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
+    bindsym $mod+Shift+j move workspace to output left
+    bindsym $mod+Shift+k move workspace to output down
+    bindsym $mod+Shift+i move workspace to output up
+    bindsym $mod+Shift+l move workspace to output right
+
     bindsym $mod+j focus left
     bindsym $mod+k focus down
     bindsym $mod+i focus up
