@@ -124,6 +124,7 @@ bar {
     position bottom
     font "Noto Sans Mono Medium 11"
     status_command while ~/.config/sway/status.sh; do sleep 1; done
+    tray_output none
     colors {
         statusline #ffffff
         background #323232
