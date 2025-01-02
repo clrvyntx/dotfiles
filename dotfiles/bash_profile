@@ -1,5 +1,4 @@
 if [ "$(tty)" = "/dev/tty1" ] ; then
     export ELECTRON_OZONE_PLATFORM_HINT=auto
-    export _JAVA_AWT_WM_NONREPARENTING=1
     exec sway
 fi
