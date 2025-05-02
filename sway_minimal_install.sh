@@ -13,5 +13,6 @@ mkdir -p ~/.config
 cp -r ./dotfiles/* ~/.config
 cp -r ./sway_minimal/* ~/.config
 mv ~/.config/bash_profile ~/.bash_profile
+mv ~/.config/.vimrc ~/.vimrc
 chmod +x ~/.config/sway/status.sh
 sudo ufw enable
