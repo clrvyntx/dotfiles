@@ -11,7 +11,7 @@ set $explorer pcmanfm
 
 # Monitor settings
 
-output DP-1 resolution 1920x1080@144Hz position 0,0
+output DP-1 resolution 1920x1080@144Hz position 0,0 allow_tearing yes
 
 # Theme settings
 
