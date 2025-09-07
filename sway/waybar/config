@@ -93,7 +93,7 @@
 		"format-icons": ["  "],
 	    "cursor": false,
 		"tooltip-format": "Scratchpad",
-		"on-click": "exec swaymsg 'scratchpad show'"
+		"on-click": "exec swaymsg '[floating] scratchpad show'"
 		},
         "custom/previous": {
 		"format": "{icon}",
