@@ -68,7 +68,7 @@ for_window {
     bindsym $mod+e exec grim -g "$(slurp)" - | wl-copy
     bindsym $mod+Shift+e exec grim -g "$(slurp)"
     bindsym $mod+Ctrl+e exec grim -g "$(slurp -a 1:1)"
-    bindsym $mod+a [class=.*] scratchpad show 
+    bindsym $mod+a scratchpad show 
     bindsym $mod+Shift+a move scratchpad
     bindsym $mod+s exec $internet
     bindsym $mod+d exec $explorer
