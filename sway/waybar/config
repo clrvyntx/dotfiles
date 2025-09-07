@@ -6,7 +6,7 @@
         "height": 40,
         "modules-left": ["memory", "cpu", "pulseaudio", "idle_inhibitor"],
         "modules-center": ["sway/workspaces"],
-        "modules-right": ["tray", "custom/scratchpad", "battery", "network#ethernet", "clock"],
+        "modules-right": ["tray", "custom/scratchpad", "battery", "clock"],
         "idle_inhibitor": {
             "format": "{icon}",
             "cursor": false,
@@ -87,21 +87,13 @@
                 "on-scroll-down": "shift_up"
             }
         },
-	"custom/scratchpad": {
-	"format": "{icon}",
-	"show-empty": true,
-	"format-icons": ["  "],
-        "cursor": false,
-	"tooltip-format": "Scratchpad",
-	"on-click": "exec swaymsg '[class=.*] scratchpad show'"
-	},
-        "network#ethernet": {
-            "interface": "enp*",
-            "format-ethernet": "",
-            "format-wifi": "",
-            "format-linked": "",
-            "format-disconnected": "",
-            "tooltip-format": "Network"
-        }
+		"custom/scratchpad": {
+		"format": "{icon}",
+		"show-empty": true,
+		"format-icons": ["  "],
+	        "cursor": false,
+		"tooltip-format": "Scratchpad",
+		"on-click": "exec swaymsg 'scratchpad show'"
+		}
     }
 ]
