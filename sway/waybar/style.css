@@ -38,12 +38,6 @@ window#waybar.empty {
     transition-duration: 0s;
 }
 
-#workspaces button.urgent {
-    background-color: transparent;
-    box-shadow: inset 0 3px #ffcc66;
-    transition-duration: 0s;
-}
-
 #battery,
 #clock,
 #cpu,
