@@ -59,6 +59,9 @@
             "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
             "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"           
         },
+        "sway/workspaces": {
+            "reverse-scroll": true
+        },
         "tray": {
             "icon-size": 18,
             "spacing": 10
