@@ -113,11 +113,7 @@ for_window {
 
     bindsym $mod+Right workspace next_on_output 
     bindsym $mod+Left workspace prev_on_output
-
-    bindsym --whole-window {
-        $mod+button4 workspace next_on_output
-        $mod+button5 workspace prev_on_output
-    }
+    bindsym $mod+Tab workspace next_on_output
 	
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
