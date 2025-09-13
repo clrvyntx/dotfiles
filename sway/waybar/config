@@ -60,8 +60,7 @@
             "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"           
         },
         "sway/workspaces": {
-            "reverse-scroll": true,
-            "disable-scroll-wraparound": true
+            "disable-scroll": true
         },
         "tray": {
             "icon-size": 18,
