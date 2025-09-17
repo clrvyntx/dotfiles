@@ -6,7 +6,7 @@
         "height": 40,
         "modules-left": ["memory", "cpu", "pulseaudio", "idle_inhibitor"],
         "modules-center": ["sway/workspaces"],
-        "modules-right": ["tray", "custom/scratchpad", "custom/previous", "custom/play", "custom/next", "battery", "clock"],
+        "modules-right": ["tray", "custom/scratchpad", "battery", "clock"],
         "idle_inhibitor": {
             "format": "{icon}",
             "cursor": false,
@@ -97,30 +97,6 @@
 	    "cursor": false,
 		"tooltip-format": "Scratchpad",
 		"on-click": "exec swaymsg '[floating] scratchpad show'"
-		},
-        "custom/previous": {
-		"format": "{icon}",
-		"show-empty": true,
-		"format-icons": ["  "],
-	    "cursor": false,
-		"tooltip-format": "Previous",
-		"on-click": "playerctl previous"
-		},
-        "custom/play": {
-		"format": "{icon}",
-		"show-empty": true,
-		"format-icons": ["  "],
-	    "cursor": false,
-		"tooltip-format": "Play",
-		"on-click": "playerctl play-pause"
-		},
-        "custom/next": {
-		"format": "{icon}",
-		"show-empty": true,
-		"format-icons": ["  "],
-	    "cursor": false,
-		"tooltip-format": "Next",
-		"on-click": "playerctl next"
 		}
     }
 ]
