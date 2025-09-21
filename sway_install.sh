@@ -10,6 +10,6 @@ cp -r ./sway/* ~/.config
 mv ~/.config/bash_profile ~/.bash_profile
 
 mkdir -p ~/.local/share/nvim/site/pack/plugins/start/nvim-scrollview
-git clone https://github.com/dstein64/nvim-scrollview ~/.local/share/nvim/site/pack/plugins/start/nvim-scrollview
+mv ~/.config/nvim/nvim-scrollview ~/.local/share/nvim/site/pack/plugins/start/nvim-scrollview
 
 sudo ufw enable
