@@ -1,4 +1,0 @@
-if [ "$(tty)" = "/dev/tty1" ] ; then
-    export ELECTRON_OZONE_PLATFORM_HINT=auto
-    exec sway
-fi
