@@ -7,5 +7,6 @@ sudo pacman -S --needed $fonts $desktop $utils
 mkdir -p ~/.config
 cp -r ./dotfiles/* ~/.config
 cp -r ./sway/* ~/.config
+mv ~/.config/bash_profile ~/.bash_profile
 
 sudo ufw enable
