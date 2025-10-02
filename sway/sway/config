@@ -48,12 +48,11 @@ client.unfocused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.urgent "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 gaps inner 5
 gaps outer 5
-default_border normal 4
-default_floating_border normal 4
+default_border pixel 4
+default_floating_border pixel 4
 smart_borders on
 smart_gaps on
 floating_modifier $mod normal
-font pango:Cantarell 11
 
 # Window Rules
 
