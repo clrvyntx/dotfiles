@@ -3,7 +3,7 @@
         "name": "bar",
         "layer": "top",
         "position": "bottom",
-        "height": 40,
+        "height": 36,
         "modules-left": ["memory", "cpu", "pulseaudio", "idle_inhibitor"],
         "modules-center": ["sway/workspaces"],
         "modules-right": ["tray", "custom/scratchpad", "battery", "clock"],
