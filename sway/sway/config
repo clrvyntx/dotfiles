@@ -43,19 +43,23 @@ input * {
 # Layout
 
 client.focused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
+client.focused_inactive "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.unfocused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.urgent "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
-gaps inner 10
-gaps outer 15
-default_border none
-default_floating_border none
+gaps inner 5
+gaps outer 5
+default_border normal 4
+default_floating_border normal 4
+smart_borders on
 smart_gaps on
 floating_modifier $mod normal
+font pango:Cantarell 11
 
 # Window Rules
 
 for_window {
     [class=.*] inhibit_idle fullscreen
+    [shell="xwayland"] title_format "[XWayland] %title"
 }
 
 # Shortcuts
