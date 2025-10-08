@@ -47,10 +47,11 @@ client.focused_inactive "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.unfocused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.urgent "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 gaps inner 10
-gaps outer 5
-default_border none
-default_floating_border none
+gaps outer 10
+default_border pixel 4
+default_floating_border pixel 4
 smart_gaps on
+smart_borders on
 floating_modifier $mod normal
 
 # Window Rules
