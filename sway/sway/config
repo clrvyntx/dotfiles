@@ -60,7 +60,7 @@ for_window {
     [class=.*] inhibit_idle fullscreen
 }
 
-assign [app_id="firefox"] workspace number 1
+assign [app_id="$internet"] workspace number 1
 
 # Shortcuts
 
