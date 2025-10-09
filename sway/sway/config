@@ -48,8 +48,8 @@ client.unfocused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 client.urgent "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
 gaps inner 10
 gaps outer 10
-default_border pixel 4
-default_floating_border pixel 4
+default_border pixel 2
+default_floating_border pixel 2
 smart_gaps on
 smart_borders on
 floating_modifier $mod normal
