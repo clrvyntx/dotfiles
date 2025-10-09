@@ -96,7 +96,7 @@
 		"format-icons": ["  "],
 	    "cursor": false,
 		"tooltip-format": "Scratchpad",
-		"on-click": "exec hyprctl dispatch togglespecialworkspace magic"
+		"on-click": "exec hyprctl dispatch togglespecialworkspace scratchpad"
 		}
     }
 ]
