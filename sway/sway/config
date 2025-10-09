@@ -60,6 +60,8 @@ for_window {
     [class=.*] inhibit_idle fullscreen
 }
 
+assign [app_id="firefox"] workspace number 1
+
 # Shortcuts
 
     bindsym $mod+o exec $term
