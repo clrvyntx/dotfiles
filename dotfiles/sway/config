@@ -1,0 +1,136 @@
+# Shortcut key (Mod1 = ALT)
+
+set $mod Mod1
+
+# Default apps
+
+set $term foot
+set $menu fuzzel
+set $internet firefox
+set $explorer pcmanfm
+
+# Monitor settings
+
+output DP-1 resolution 1920x1080@144Hz position 0,0 allow_tearing yes
+
+# Theme settings
+
+set $gnome-schema org.gnome.desktop.interface
+exec gsettings set $gnome-schema gtk-theme 'Materia-light'
+exec gsettings set $gnome-schema icon-theme 'Papirus'
+exec gsettings set $gnome-schema cursor-theme 'Adwaita'
+exec gsettings set $gnome-schema font-name 'Cantarell 11'
+
+# Startup
+
+exec gammastep
+exec swaybg -i ~/.config/swaybg/Wallpaper.jpg
+exec swayidle -w
+exec autotiling-rs
+exec mako
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Input configuration
+
+input * {
+    xkb_layout "us"
+    xkb_variant "altgr-intl"
+    accel_profile "flat"
+    pointer_accel 0
+}
+
+# Layout
+
+client.focused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
+client.focused_inactive "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
+client.unfocused "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
+client.urgent "#64727d" "#64727d" "#ffffff" "#64727d" "#64727d"
+gaps inner 10
+gaps outer 10
+default_border none
+default_floating_border none
+smart_gaps on
+smart_borders on
+floating_modifier $mod normal
+
+# Window Rules
+
+for_window {
+    [class=.*] inhibit_idle fullscreen
+}
+
+# Shortcuts
+
+    bindsym $mod+o exec $term
+    bindsym $mod+p exec $menu
+    bindsym $mod+q kill
+    bindsym $mod+w exec grim - | wl-copy
+    bindsym $mod+Shift+w exec grim
+    bindsym $mod+e exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+Shift+e exec grim -g "$(slurp)"
+    bindsym $mod+Ctrl+e exec grim -g "$(slurp -a 1:1)"
+    bindsym $mod+a scratchpad show 
+    bindsym $mod+Shift+a move scratchpad
+    bindsym $mod+s exec $internet
+    bindsym $mod+d exec $explorer
+    bindsym $mod+f fullscreen
+    bindsym $mod+c floating toggle
+    bindsym $mod+Shift+n reload
+    bindsym $mod+Shift+F1 exec swaymsg exit
+    bindsym $mod+Shift+F2 exec systemctl reboot
+    bindsym $mod+Shift+F3 exec systemctl poweroff
+
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+
+    bindsym $mod+Shift+1 move container to workspace number 1; workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2; workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3; workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4; workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5; workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6; workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7; workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8; workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
+
+    bindsym $mod+Shift+j move workspace to output left
+    bindsym $mod+Shift+k move workspace to output down
+    bindsym $mod+Shift+i move workspace to output up
+    bindsym $mod+Shift+l move workspace to output right
+
+    bindsym $mod+j focus left
+    bindsym $mod+k focus down
+    bindsym $mod+i focus up
+    bindsym $mod+l focus right
+
+    bindsym $mod+Right workspace next_on_output 
+    bindsym $mod+Left workspace prev_on_output
+    bindsym $mod+Tab workspace next_on_output
+	
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioStop exec playerctl stop
+
+# Enabling Waybar
+
+bar {
+    swaybar_command waybar
+}
+
+include @sysconfdir@/sway/config.d/*

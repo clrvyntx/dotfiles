@@ -1,0 +1,102 @@
+[
+    {
+        "name": "bar",
+        "layer": "top",
+        "position": "bottom",
+        "height": 40,
+        "modules-left": ["memory", "cpu", "pulseaudio", "idle_inhibitor"],
+        "modules-center": ["sway/workspaces"],
+        "modules-right": ["tray", "custom/scratchpad", "battery", "clock"],
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "cursor": false,
+            "tooltip": false,
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            }
+        },
+        "cpu": {
+            "format": " {usage}%",
+            "tooltip": false
+        },
+        "battery": {
+            "bat": "BAT1",
+            "adapter": "AC",
+            "interval": 10,
+            "states": {
+                "full": 100,
+                "good": 99,
+                "critical": 15
+            },
+            "format": "{icon} {capacity}% ",
+            "format-charging": " {capacity}%",
+            "format-plugged": " {capacity}%",
+            "format-full": " {capacity}%",
+            "format-icons": ["", "", "", "", ""]
+        },     
+        "memory": {
+            "format": " {}%",
+            "tooltip": false
+        },
+        "pulseaudio": {
+            "tooltip": false,
+            "cursor": false,
+            "scroll-step": 5,
+            "format": "{icon} {volume}%{format_source}",
+            "format-bluetooth": "{icon} {volume}%{format_source}",
+            "format-bluetooth-muted": " {icon}{format_source}",
+            "format-muted": " {volume}% {format_source}",
+            "format-source": "   {volume}%",
+            "format-source-muted": "   {volume}%",
+            "format-icons": {
+                "headphone": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"           
+        },
+        "sway/workspaces": {
+            "disable-scroll": true
+        },
+        "tray": {
+            "icon-size": 18,
+            "spacing": 10
+        },
+        "clock": {
+            "interval": 1,
+            "format": " {:%H:%M    %d/%m/%y}",
+	        "timezone": "Etc/GMT+3",
+            "cursor": false,
+            "tooltip-format": "<tt>{calendar}</tt>",
+            "calendar": {
+                "mode"          : "month",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "",
+                "on-scroll"     : 1,
+                "format": {
+                    "months":     "<span color='#ffffff'><b>{}</b></span>",
+                    "days":       "<span color='#ffffff'><b>{}</b></span>",
+                    "weeks":      "<span color='#ffcc66'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                    "today":      "<span color='#ffffff'><b><u>{}</u></b></span>"
+                }
+            },
+            "actions": {
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+            }
+        },
+		"custom/scratchpad": {
+		"format": "{icon}",
+		"show-empty": true,
+		"format-icons": ["  "],
+	    "cursor": false,
+		"tooltip-format": "Scratchpad",
+		"on-click": "exec swaymsg '[floating] scratchpad show'"
+		}
+    }
+]
