@@ -31,6 +31,11 @@ exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+exec firefox
+exec discord
+exec steam
+exec spotify-launcher
+
 # Input configuration
 
 input * {
@@ -58,6 +63,10 @@ floating_modifier $mod normal
 
 for_window {
     [class=.*] inhibit_idle fullscreen
+    [app_id="firefox"] move to workspace 1
+    [app_id="discord"] move to workspace 2
+    [title="^Steam$"] move to workspace 3
+    [app_id="spotify"] move to workspace 4
 }
 
 # Shortcuts
