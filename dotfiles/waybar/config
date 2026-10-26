@@ -67,7 +67,7 @@
             "spacing": 10
         },
 		"upower": {
-		    "format": "  ",
+		    "format": "  ",
 		    "show-icon": false,
 			"hide-if-empty": true,
 			"tooltip": true,
