@@ -3,7 +3,7 @@ desktop="sway waybar swaybg swayidle swaylock gammastep mako libnotify autotilin
 utils="foot fuzzel firefox pcmanfm gvfs file-roller neovim wl-clipboard swayimg mpv grim slurp ufw materia-gtk-theme papirus-icon-theme"
 apps="steam discord spotify-launcher obs-studio"
 
-sudo pacman -S --needed $fonts $desktop $utils
+sudo pacman -S --needed $fonts $desktop $utils $apps
 
 mkdir -p ~/.config
 cp -r ./dotfiles/* ~/.config
