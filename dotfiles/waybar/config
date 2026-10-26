@@ -4,7 +4,7 @@
         "layer": "top",
         "position": "bottom",
         "height": 40,
-        "modules-left": ["memory", "cpu", "pulseaudio", "upower#mouse", "idle_inhibitor"],
+        "modules-left": ["memory", "cpu", "pulseaudio", "upower#mouse", "upower#controller", "idle_inhibitor"],
         "modules-center": ["sway/workspaces"],
         "modules-right": ["tray", "custom/scratchpad", "battery","clock"],
         "idle_inhibitor": {
@@ -69,6 +69,14 @@
 		"upower#mouse": {
             "format": "  {percentage} ",
 		    "model": "Logitech PRO X 2 SE",
+		    "show-icon": false,
+			"hide-if-empty": true,
+			"tooltip": false,
+		    "cursor": false
+		},
+        "upower#controller": {
+            "format": "  {percentage} ",
+		    "model": "DualSense Wireless Controller",
 		    "show-icon": false,
 			"hide-if-empty": true,
 			"tooltip": false,
