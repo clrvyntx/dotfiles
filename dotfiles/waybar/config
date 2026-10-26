@@ -4,9 +4,9 @@
         "layer": "top",
         "position": "bottom",
         "height": 40,
-        "modules-left": ["memory", "cpu", "pulseaudio", "idle_inhibitor"],
+        "modules-left": ["memory", "cpu", "pulseaudio", "upower#mouse", "idle_inhibitor"],
         "modules-center": ["sway/workspaces"],
-        "modules-right": ["tray", "custom/scratchpad", "battery", "upower", "clock"],
+        "modules-right": ["tray", "custom/scratchpad", "battery","clock"],
         "idle_inhibitor": {
             "format": "{icon}",
             "cursor": false,
@@ -66,12 +66,12 @@
             "icon-size": 18,
             "spacing": 10
         },
-		"upower": {
-		    "format": "  ",
+		"upower#mouse": {
+            "format": "  {percentage} ",
+		    "model": "Logitech PRO X 2 SE",
 		    "show-icon": false,
 			"hide-if-empty": true,
-			"tooltip": true,
-			"tooltip-spacing": 20,
+			"tooltip": false,
 		    "cursor": false
 		},
         "clock": {
